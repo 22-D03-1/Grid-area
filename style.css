@@ -3,276 +3,355 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    width: 100%;
-}
 body {
     width: 100%;
-margin: 100px;
-}
-.body {
-max-width: 900px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 80px 40px 600px 400px 600px 400px;
-    grid-template-areas:
-    "header header header"
-    "nav nav nav"
-    "section section section"
-    "article article article"
-    "article2 article2 article2"
-    "footer footer footer"
-    ;
     height: 100vh;
-    margin-left:auto;
-    margin-right: auto;
+}
+.all-element {
+ 
+    height: 100vh; 
 }
 header {
+    height: 90px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: center;
-border-bottom: 1px solid rgba(128, 128, 128, 0.289) ;
-grid-area: header;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.289) ;
 }
-header>p {
+header>.text {
+    width: 80%;
+}
+.text>p {
     text-align: center;
     font-size: 15px;
     color: gray;
 }
-.text {
-    margin-left: 50px;
- width: 500px;
-}
-header>h1{
+.text>h1{
     text-align: center;
-    font-size: 35px;
+    font-weight: 600;
+    font-size: 50px;
 }
 nav {
-    color: rgba(0, 0, 0, 0.665);
-    width: 900px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.289) ;
+    color: rgba(0, 0, 0, 0.714);
+    padding-left: 250px;
+    padding-right: 250px;
+    height: 90px;
+    width: 100%;
 }
-.hom {
-    color: rgba(0, 0, 0, 0.88);
+nav >.hom {
+    color: black;
+    font-weight: bold;
 }
-span {
-    color: rgba(128, 128, 128, 0.495);
+nav >div >span {
+    color: rgba(128, 128, 128, 0.666);
 }
 section {
-    grid-area:section ;
-display: grid;
-grid-template-columns: 1fr 3fr 1fr ;
-grid-template-rows:repeat(4,150px) ;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr ;
+    grid-template-rows:repeat(4,1fr) ;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.652);
+    margin-top: 20px;
 }
 section> main {
+    width: 100%;
     grid-column: 2/3;
-    grid-row: 1/5;
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: 1fr 1fr;
-padding-left: 20px;
-padding-right: 20px;
-border-left: 1px rgba(128, 128, 128, 0.14) solid;
-border-right: 1px  rgba(128, 128, 128, 0.14) solid;
-margin-bottom: 60px;
-margin-top: 20px;
-
+    display: grid;
+    padding: 0px 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows:  600px 400px;
+    border-left: 1px rgba(128, 128, 128, 0.315) solid;
+    border-right: 1px  rgba(128, 128, 128, 0.363) solid;
 }
 main>.img1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-image: url(https://c.wallhere.com/photos/9b/bf/grass_women_nature_women_outdoors_model-1161789.jpg!d);
+    background-image: url(https://unymart.store/othoozig/2016/02/helena-lopes-LSdo2qHFI8k-unsplash.jpg);
     background-size: cover;
     background-position: center;
 }
+.right {
+    position: relative;
+    padding: 0px 15px;
+   grid-column: 3/4;
+   display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  300px 1fr;
+    gap: 15px;
+}
+.right  .img-1 {
+    background-image: url(https://www.bismarck-stiftung.de/wp-content/uploads/2021/07/7.-Das-Turmhaus_18841-1030x630.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.right> .ttt >h1{
+padding-bottom:30px ;
+}
+.right> .ttt >p {
+    color: rgba(0, 0, 0, 0.582);
+}
+.right>.ttt> span {
+    position: absolute;
+    color: gray;
+    margin-top: 20px;
+}
+.left {
+    padding: 0px 15px;
+   grid-column: 1/2;
+   grid-row: 1/4;
+   display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  200px 200px 200px 200px ;
+    gap: 15px;
+}
+.left>.img-2 {
+    background-image: url(https://blasterkingdom.com/wp-content/uploads/2020/06/h_stijn-swinnen-qwe8TLRnG8k-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.left h1{
+    padding-bottom:10px ;
+    font-size: 20px;
+    }
+.left>.img-3 {
+    background-image: url(https://www.artswin.org/wp-content/uploads/2020/06/h_quino-al-j-vgwo8di98-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ .left p {
+    color: rgba(0, 0, 0, 0.582);
+}
+.left span {
+    position: absolute;
+    color: gray;
+    margin-top: 20px;
+}
 main> .main-text {
-    grid-column: 1/3;
+    position: relative;
+    grid-column: 1/2;
     grid-row: 2/3;
-    background-color: white;
 }
 main> .main-text>p {
-    margin: 10px;
     text-align: center;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color:rgba(0, 0, 0, 0.801);
 }
 main> .main-text>button {
     color: white;
+    position: absolute;
     background-color: rgba(52, 115, 151, 0.94);
-    width: 150px;
     padding: 4px;
     font-weight: bolder;
-    margin-left: 200px;
-    margin-top: 10px;
     border: none;
+    left: 45%;
+    margin-top: 30px;
 }
 main> .main-text>span {
     display: block;
     word-spacing: 10px;
     padding: 10px;
     text-align: center;
+    color: gray;
 }
 main> .main-text>h1 {
     text-align: center;
     padding: 10px;
 }
-.teil1 {
-   
-    grid-area:article ;
+article {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 120px 1fr;
-    
-
+    grid-template-rows: 200px 300px;
+   gap: 20px;
+    width: 100%;
+    margin-top: 150px;
+    border-bottom: 1PX solid rgba(128, 128, 128, 0.652);
 }
-.teil1>.iamags-1 {
-    background-image: url(https://img.fotocommunity.com/the-living-forest-596-thirsty-squirrel-38ac92ed-cdc5-40a4-92a3-d124de93b2d2.jpg?width=1920);
+article>.iamags-1 {
+    background-image: url(https://letobroene.com/wp-content/uploads/2020/06/8.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.teil1>.iamags-2 {
-    background-image: url(https://www.ndr.de/fernsehen/sendungen/nordmagazin/bilderaktion/bilderaktionmv1346_v-contentgross.jpg);
+article>.iamags-2 {
+    background-image: url(https://opinionatedamerican.com/wp-content/uploads/2020/06/h_benigno-hoyuela-E1ZwXiBD7LA-unsplash.jpg);
+       left: 45%;
+   
     background-size: cover;
     background-position: center;
-    margin: 10px;
-    
 }
-.teil1>.iamags-3 {
-    background-image: url(https://images.unsplash.com/photo-1612021470627-ca1cb2d2ee92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlsZGVyfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+article>.iamags-3 {
+    background-image: url(https://i0.wp.com/www.crimsonnewsmagazine.org/wp-content/uploads/2020/06/h_mia-mackenzie-cyS0ZhHd37g-unsplash.jpg?fit=1280%2C848&ssl=1);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.teil1>.iamags-4 {
-    background-image: url(https://www.ndr.de/fernsehen/sendungen/nordmagazin/bilderaktion/bilderaktionmv1732_v-contentgross.jpg);
+article>.iamags-4 {
+    background-image: url(https://www.artswin.org/wp-content/uploads/2015/04/man-in-white-tank-top-4143436.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.teil1>.iamags-5 {
-    background-image: url(https://www.wetteronline.ch/?ireq=true&pid=p_wotexte_multimedia&src=wotexte/vermarktung/snippets/gallery/2021/12/31/image_20211231_jr_640x426_c4cb728c14b35d29e6b0e22f7e81a4c4.jpg);
+article>.iamags-5 {
+    background-image: url(https://thefox.withemes.com/times/wp-content/uploads/sites/23/2020/06/h_gerson-cifuentes-W1VqcpcnSHk-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-h1 ,p { 
-    font-size: 18px;
-    padding: 5px;
+article div> p {
+    color: rgba(0, 0, 0, 0.473);
+    font-size: 23px;
 }
-.teil1>.text-1 {
-    margin: 10px;
-}
-.teil1>.text-2 {
-    margin: 10px;
-}
-.teil1>.text-3 {
-    margin: 10px;
-}
-.teil1>.text-4 {
-    margin: 10px;
-}
-.teil1>.text-5 {
-    margin: 10px;
+article div> h1 {
+margin-bottom: 15px;
+    font-size: 21px;
+    font-weight: 800;
 }
 .teil2{ 
-    grid-area:article2 ;
-width: 100%;
+    gap: 20px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows:repeat(7,1fr) ;
- 
-    grid-column: 1/3;
+    grid-template-columns: 1fr 300px 200px;
+    grid-template-rows:900px 250px ;
+    margin-top: 50px;
+margin-bottom: 50px;
+    border-bottom: 1PX solid rgba(128, 128, 128, 0.652);
 }
-.teil2>.aside-left2 {
+.teil2>.gross-imag {
+    width: 100%;
     grid-column: 1/2;
-    grid-row: 1/7;
-    background-image: url(https://cdn.pixabay.com/photo/2021/01/24/20/21/cloud-5946381__340.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.teil2>h2 {
-
-    grid-column: 1/2;
-    grid-row:7/8 ;
-}
-.teil2>.aside-right2 >.text1 {
-    grid-column: 2/3;
     grid-row: 1/2;
-  
+    background-image: url(https://images.cosmopolitan.de/106147-brad-pitt,id=6114c73a,b=cosmopolitan,w=1335,ca=0.00,0.00,100.00,100.00,rm=sk.jpeg);
+    background-size: cover;
+    background-position: center;
 }
-.teil2>.aside-right2 >.text2 {
-
-    grid-column: 2/3;
-    grid-row: 2/3;
+.teil2 .tt{
+    grid-column: 1/2;
+    grid-row:2/3 ;
 }
-.teil2>.aside-right2 >.text3 {
-    grid-column: 2/3;
-  
-    grid-row: 3/4;
+.teil2 .tt p {
+    margin-top: 80px;
+    color: rgba(0, 0, 0, 0.596);
 }
-.teil2>.aside-right2 >.text4 {
-    grid-column: 2/3;
-    grid-row: 4/5;
+.teil2 .tt span {
+    position: absolute;
+color: gray;
+margin-top: 30px;
 }
-
-
-footer {
-    
-grid-area: footer;
-
+.teil2 .tt button {
+    color: white;
+    position: absolute;
+    background-color: rgba(52, 115, 151, 0.94);
+    padding: 4px;
+    font-weight: bolder;
+    border: none;
+    margin-top: 10px;
 }
-.footer {
+.texttt { 
     display: grid;
-grid-template-columns: repeat(5,1fr);
-grid-template-rows: 120px 1fr;
-
+    grid-template: 2800px 180px;
+    grid-template-rows: repeat(4,150px) 520px;
+    row-gap: 30px;
 }
-.footer>.iamgs-1 {
-   background-image: url(https://www.fotowelt-hamburg.de/images/neue-hamburg-bilder-001.jpg);
+.texttt div> p {
+    color: rgba(0, 0, 0, 0.73);
+    font-size: 20px;
+    margin-top: 20px;
+}
+.texttt div>span {
+    position: absolute;
+    color: gray;
+    font-size: 20px;
+    font-weight: 800;
+}
+.t1 {
+    grid-column: 1/2;
+    grid-row:1/2 ;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-template-rows: 150px;
+}
+.teil2>.texttt>.t1>.iamgs-1 {
+     background-image: url(https://c8.alamy.com/compde/ba3ptb/70er-jahre-schwarz-weiss-foto-menschen-kinder-zwei-kleine-madchen-sitzen-in-der-wiese-im-alter-von-5-bis-10-jahre-ba3ptb.jpg);
+     background-size: cover;
+     background-position: center;
+ }
+ .t2 {
+    grid-column: 1/2;
+    grid-row:2/3 ;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-template-rows: 150px;
+}
+.teil2>.texttt>.t2>.iamgs-2 {
+     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsNC5t4SbCSIO4BLduHornl3cXCvsn4yDM1w&usqp=CAU);
+     background-size: cover;
+     background-position: center;
+ }
+ .t3 {
+    grid-column: 1/2;
+    grid-row:3/4 ;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-template-rows: 150px;
+}
+.teil2>.texttt>.t3>.iamgs-3 {
+     background-image: url(https://blasterkingdom.com/wp-content/uploads/2020/06/h_stijn-swinnen-qwe8TLRnG8k-unsplash.jpg);
+     background-size: cover;
+     background-position: center;
+ }
+ .t4 {
+    grid-column: 1/2;
+    grid-row:4/5 ;
+    display: grid;
+    grid-template-columns: 300px 200px;
+    grid-template-rows: 150px;
+}
+.teil2>.texttt>.t4>.iamgs-4 {
+     background-image: url(https://www.artswin.org/wp-content/uploads/2020/06/h_quino-al-j-vgwo8di98-unsplash.jpg);
+     background-size: cover;
+     background-position: center;
+ }
+footer {  
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 200px 300px;
+    margin-top: 50px;
+    margin-top: 20px;
+    gap: 20px;
+}
+footer>.iamgs-1 {
+    background-image: url(https://www.fotowelt-hamburg.de/images/neue-hamburg-bilder-001.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.footer>.iamgs-2 {
-   background-image: url(https://b2b.wien.info/resource/image/387880/Hero-Header/1890/700/99bc99f314f2cfc014d9379d6fb650c2/km/header-3840x1060px-wien-oben.jpg);
+footer>.iamgs-2 {
+   background-image: url(https://prod-nik-cdn.dxo.com/wp-content/uploads/2021/11/1er-octobre-nik-Silver.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.footer>.iamgs-3 {
- background-image: url(https://i.pinimg.com/originals/67/1e/e9/671ee9c4278deffe89b069e0d3986675.jpg);
+footer>.iamgs-3 {
+    background-image: url(http://thetimeswriter.com/wp-content/uploads/2020/05/h_4k-wallpaper-adobe-amazing-beautiful-2623394.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.footer>.iamgs-4 {
-   background-image: url(https://www.tagesschau.de/multimedia/bilder/lemur-kamera-101~_v-videoweb1x1l.jpg);
+footer>.iamgs-4 {
+    background-image: url(https://www.sewatimes.com/wp-content/uploads/2020/06/h_quino-al-ZrLStmu_ZgY-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.footer>.iamgs-5 {
-   background-image: url(https://franks-travelbox.com/wp-content/uploads/2018/09/deutschland-berlin-seit-dem-fall-der-berliner-mauer-gilt-das-brandenburger-tor-in-berlin-als-symbol-der-deutschen-einheit-s-borisov-shutterstock-1200x800.jpg);
+footer>.iamgs-5 {
+    background-image: url(https://www.artswin.org/wp-content/uploads/2020/05/h_brown-and-gray-concrete-temple-4090085.jpg);
     background-size: cover;
     background-position: center;
-    margin: 10px;
 }
-.footer>.text-1 {
+footer div> p {
     
+    color: rgba(0, 0, 0, 0.73);
+    font-size: 23px;
 }
-.footer>.text-2 {
-
-}
-.footer>.text-3 {
-
-}
-.footer>.text-4 {
-
-}
-.footer>.text-5 {
-
+footer div> h1 {
+  
+    font-size: 23px;
+    font-weight: 800;
 }
